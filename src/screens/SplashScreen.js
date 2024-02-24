@@ -2,6 +2,8 @@ import { useNavigation } from "@react-navigation/native";
 import { Animated, StyleSheet, Text, View } from "react-native";
 import { Directions, FlingGestureHandler } from "react-native-gesture-handler";
 import Swiper from "react-native-swiper";
+import { Image } from 'expo-image';
+import logo from "../../assets/logo-bg.jpg";
 
 const onDownFlingHandlerStateChange = ({
     nativeEvent,
@@ -29,17 +31,16 @@ const onUpFlingHandlerStateChange = ({
 export default function SplashScreen() {
     const navigation = useNavigation();
 
-
     const data = [
         {
-            color: "#AAAAAA",
-            textColor: "#000000",
-            title: "Test"
+            color: "#81b918",
+            textColor: "#FFFFFF",
+            title: "Politiclear"
         },
         {
-            color: "#BBBBBB",
-            textColor: "#000000",
-            title: "Launching"
+            color: "#81b918",
+            textColor: "#FFFFFF",
+            title: "Launching..."
         }
     ]
 
@@ -54,6 +55,7 @@ export default function SplashScreen() {
                     <View
                         style={[styles.item, { backgroundColor: item.color }]}
                         key={item.title}>
+                        <Image source={logo} style={styles.image}/>
                         <Text style={[styles.text, { color: item.textColor }]}>
                             {item.title}
                         </Text>
@@ -73,8 +75,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#ecf0f1',
         padding: 8,
     },
-    wrapper: {
-        // flex: 1,
+    image: {
+        width: 150,
+        height: 150,
     },
     item: {
         flex: 1,
@@ -83,7 +86,8 @@ const styles = StyleSheet.create({
     },
 
     text: {
-        fontSize: 30,
+        fontSize: 50,
+        fontStyle: "italic",
         fontWeight: 'bold',
     },
 })
