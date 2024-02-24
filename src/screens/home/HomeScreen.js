@@ -1,15 +1,40 @@
-import { ImageBackground, Pressable, StyleSheet, Text, View } from "react-native"
+import { ImageBackground, Modal, Pressable, StyleSheet, Text, Touchable, View } from "react-native"
 import { Image } from "expo-image"
 import ireland_map from "../../../assets/ireland_constituency_map.png"
+import dublin_map from "../../../assets/dublin_constituency_map.png"
 import useDimensions from "../../state/hooks/useDimensions";
 import RelativeToBg from "../../components/layout/RelativeToBg";
+import { useState } from "react";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 
 export default function HomeScreen() {
     const { scaledImageDimensions } = useDimensions(ireland_map);
 
+    const [isDublinModalVisable, setIsDublinModalVisable] = useState(true);
+
     return (
         <View style={styles.container}>
+            <Modal
+                animationType="slide"
+                visible={isDublinModalVisable}
+                onRequestClose={() => {
+                    setIsDublinModalVisable(false);
+                }}
+            >
+                <View style={styles.centeredView}>
+                    <View style={styles.modalView}>
+                    <Text style={styles.modalTitle}>Pick your Dublin Constituency</Text>
+                        <Image source={dublin_map} style={{
+                            width: 280,
+                            height: 391
+                        }}/>
+                        <TouchableOpacity onPress={() => setIsDublinModalVisable(false)}>
+                            <Text> Close </Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </Modal>
             <View style={styles.titleContainer}>
                 <Text style={styles.title}>Home</Text>
                 <Text style={styles.subtitle}>Select a constituency to get started...</Text>
@@ -73,7 +98,7 @@ export default function HomeScreen() {
                         zIndex: false ? 0 : 10,
                     }}
                     onPress={() => {
-                        console.log("pressed dublin");
+                        setIsDublinModalVisable(true);
                     }}
                 />
             </RelativeToBg>
@@ -104,4 +129,25 @@ const styles = StyleSheet.create({
         height: 0,
         margin: 0,
     },
+    modalView: {
+        margin: 20,
+        marginTop: 100,
+        backgroundColor: 'white',
+        borderRadius: 20,
+        padding: 35,
+
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5,
+    },
+    modalTitle: {
+        fontSize: 20,
+        textAlign: "center",
+        marginBottom: 20
+    }
 })
