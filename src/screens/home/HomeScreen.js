@@ -8,10 +8,10 @@ import { useState } from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
     const { scaledImageDimensions } = useDimensions(ireland_map);
 
-    const [isDublinModalVisable, setIsDublinModalVisable] = useState(true);
+    const [isDublinModalVisable, setIsDublinModalVisable] = useState(false);
 
     return (
         <View style={styles.container}>
@@ -20,15 +20,22 @@ export default function HomeScreen() {
                 visible={isDublinModalVisable}
                 onRequestClose={() => {
                     setIsDublinModalVisable(false);
+                    navigation.navigate("Constituency", { constituency: "Donegal" });
                 }}
             >
                 <View style={styles.centeredView}>
                     <View style={styles.modalView}>
-                    <Text style={styles.modalTitle}>Pick your Dublin Constituency</Text>
-                        <Image source={dublin_map} style={{
-                            width: 280,
-                            height: 391
-                        }}/>
+                        <Text style={styles.modalTitle}>Pick your Dublin Constituency</Text>
+                        <Pressable onPress={() => {
+                            setIsDublinModalVisable(false)
+                            navigation.navigate("Constituency", { constituency: "Dublin Bay South" })
+                        }}>
+                            <Image source={dublin_map} style={{
+                                width: 280,
+                                height: 391
+                            }}
+                            />
+                        </Pressable>
                         <TouchableOpacity onPress={() => setIsDublinModalVisable(false)}>
                             <Text> Close </Text>
                         </TouchableOpacity>
@@ -60,6 +67,7 @@ export default function HomeScreen() {
                     }}
                     onPress={() => {
                         console.log("pressed donegal");
+                        navigation.navigate("Constituency", { constituency: "Donegal" });
                     }}
                 />
             </RelativeToBg>
