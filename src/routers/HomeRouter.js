@@ -1,6 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/home/HomeScreen';
 import HomeBottomTab from '../components/navigation/HomeBottomTab';
+import ConstituencyScreen from '../screens/ConstituencyScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,6 +16,7 @@ export default function HomeRouter() {
         tabBar={HomeBottomTab}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Constituency" component={ConstituencyScreen} />
     </Tab.Navigator>
   );
 }
