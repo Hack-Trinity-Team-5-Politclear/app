@@ -66,7 +66,6 @@ export default function HomeScreen({ navigation }) {
                         zIndex: false ? 0 : 10,
                     }}
                     onPress={() => {
-                        console.log("pressed donegal");
                         navigation.navigate("Constituency", { constituency: "Donegal" });
                     }}
                 />

@@ -7,7 +7,6 @@ import Link from "../components/Link";
 export default function TDScreen({ route, navigation }) {
     const { td } = route.params;
     const profile = tds[td];
-    console.log(profile.headshot);
     return (
         <ScrollView style={styles.container}>
             <View>

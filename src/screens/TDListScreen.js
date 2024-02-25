@@ -7,15 +7,15 @@ import TDCard from "../components/TDCard";
 export default function TDListScreen({navigation}) {
 
     const tdList = constituencies.map((constituency) => (
-        <View>
+        <View key={constituency.name}>
             <Text style={styles.constituencyTitle}>{constituency.name}</Text>
             <FlatList
                 keyExtractor={(item) => tds[item].name}
                 data={constituency.tds}
                 numColumns={2}
+                scrollEnabled={false}
                 renderItem={({ item }) => {
                     const td = tds[item];
-                    console.log(td);
                     return <TDCard key={td.name} id={item} navigation={navigation}/>
                 }}
             />

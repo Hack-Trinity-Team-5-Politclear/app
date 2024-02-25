@@ -26,7 +26,6 @@ export default function LearnActivity({ route, navigation }) {
       );
 
     function check(index) {
-        console.log(index, question.correct_index)
         if (index === question.correct_index) {
             setScore(prev => prev + 1);
 
