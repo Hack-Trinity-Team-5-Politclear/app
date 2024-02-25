@@ -14,6 +14,10 @@ export default function HomeBottomTab() {
                 label="Home"
             />
             <TabItem
+                icon="graduation-cap"
+                label="Learn"
+            />
+            <TabItem
                 icon="newspaper-o"
                 label="Local"
             />

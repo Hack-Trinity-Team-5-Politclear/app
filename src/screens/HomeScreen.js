@@ -1,9 +1,9 @@
 import { ImageBackground, Modal, Pressable, StyleSheet, Text, Touchable, View } from "react-native"
 import { Image } from "expo-image"
-import ireland_map from "../../../assets/ireland_constituency_map.png"
-import dublin_map from "../../../assets/dublin_constituency_map.png"
-import useDimensions from "../../state/hooks/useDimensions";
-import RelativeToBg from "../../components/layout/RelativeToBg";
+import ireland_map from "../../assets/ireland_constituency_map.png"
+import dublin_map from "../../assets/dublin_constituency_map.png"
+import useDimensions from "../state/hooks/useDimensions";
+import RelativeToBg from "../components/layout/RelativeToBg";
 import { useState } from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
