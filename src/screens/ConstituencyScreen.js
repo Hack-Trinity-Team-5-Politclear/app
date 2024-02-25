@@ -4,7 +4,7 @@ import tds from "../../assets/data/tds.json";
 import { FlatList } from "react-native-gesture-handler";
 import { Image } from "expo-image";
 
-export default function ConstituencyScreen({ cons, route }) {
+export default function ConstituencyScreen({ cons, route, navigation }) {
     const { constituency } = route.params;
     const profile = getConstituency(constituency);
 
@@ -12,8 +12,6 @@ export default function ConstituencyScreen({ cons, route }) {
         console.error("invalid constituency");
         return <></>
     }
-
-    console.log(profile)
 
     return (
         <View style={styles.container}>
@@ -32,11 +30,11 @@ export default function ConstituencyScreen({ cons, route }) {
                     <Text>Representatives (TDs)</Text>
                     <FlatList
                         data={profile.tds}
-                        renderItem={({ item }) => <TDProfile key={item.name} id={item} />}
+                        renderItem={({ item }) => <TDProfile key={item.name} id={item} navigation={navigation}/>}
                         numColumns={2}
                     />
                 </View>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.goBack()}>
                     <Text style={styles.buttonText}>Go Back</Text>
                 </TouchableOpacity>
             </View>
@@ -44,18 +42,20 @@ export default function ConstituencyScreen({ cons, route }) {
     )
 }
 
-const TDProfile = ({ id }) => {
+const TDProfile = ({ id, navigation }) => {
     const profile = tds[id];
-    console.log(profile);
 
     if (!profile) return <Text>No td here.</Text>
 
+
     return (
-        <View style={styles.tdCard}>
+        <TouchableOpacity style={styles.tdCard} onPress={() => {
+            navigation.navigate("TD", { td: id });
+        }}>
             <Image source={profile.headshot} style={styles.tdPic} />
             <Text style={styles.tdName}> {profile.name} </Text>
-            <Text style={styles.tdAction}>press to see more.</Text>
-        </View>
+            {/* <Image source= */}
+        </TouchableOpacity>
     )
 }
 
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         marginLeft: 20
     },
     representatives: {
-        padding: 10
+        padding: 2
     },
     tdCard: {
         borderWidth: 1,
@@ -103,8 +103,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         padding: 10,
-        width: 150,
-        margin: 15
+        width: 160,
+        margin: 5
     },
     tdPic: {
         width: 60,
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
         borderRadius: 30
     },
     tdName: {
-        fontSize: 18
+        fontSize: 12
     },
     tdAction: {
         fontSize: 10
