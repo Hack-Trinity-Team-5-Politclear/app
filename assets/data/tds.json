@@ -196,8 +196,8 @@
         "headshot": "https://data.oireachtas.ie/ie/oireachtas/member/id/Thomas-Pringle.D.2011-03-09/image/large"
     },
     "Catherine-Connolly.D.2016-10-03": {
-        "name": "",
-        "party": "",
+        "name": "Catherine Connolly",
+        "party": "Independent",
         "age": 0,
         "constituency": "Galway West",
         "social_media": {
@@ -207,11 +207,11 @@
         },
         "contact": "",
         "summary": "",
-        "headshot": ""
+        "headshot": "https://data.oireachtas.ie/ie/oireachtas/member/id/Catherine-Connolly.D.2016-10-03/image/large"
     },
     "Mairéad-Farrell.D.2020-02-08": {
-        "name": "",
-        "party": "",
+        "name": "Mairéad Farrell",
+        "party": "Sinn Féin",
         "age": 0,
         "constituency": "Galway West",
         "social_media": {
@@ -221,11 +221,11 @@
         },
         "contact": "",
         "summary": "",
-        "headshot": ""
+        "headshot": "https://data.oireachtas.ie/ie/oireachtas/member/id/Mair%C3%A9ad-Farrell.D.2020-02-08/image/large"
     },
     "Noel-Grealish.D.2002-06-06": {
-        "name": "",
-        "party": "",
+        "name": "Noel Grealish",
+        "party": "Independent",
         "age": 0,
         "constituency": "Galway West",
         "social_media": {
@@ -235,11 +235,11 @@
         },
         "contact": "",
         "summary": "",
-        "headshot": ""
+        "headshot": "https://data.oireachtas.ie/ie/oireachtas/member/id/Noel-Grealish.D.2002-06-06/image/large"
     },
     "Hildegarde-Naughton.S.2013-07-19": {
-        "name": "",
-        "party": "",
+        "name": "Hildegarde Naughton",
+        "party": "Fine Gael",
         "age": 0,
         "constituency": "Galway West",
         "social_media": {
@@ -249,11 +249,11 @@
         },
         "contact": "",
         "summary": "",
-        "headshot": ""
+        "headshot": "https://data.oireachtas.ie/ie/oireachtas/member/id/Hildegarde-Naughton.S.2013-07-19/image/large"
     },
     "Éamon-Ó-Cuív.S.1989-10-01": {
-        "name": "",
-        "party": "",
+        "name": "Éamon Ó Cuív",
+        "party": "Fianna Fáil",
         "age": 0,
         "constituency": "Galway West",
         "social_media": {
@@ -263,20 +263,6 @@
         },
         "contact": "",
         "summary": "",
-        "headshot": ""
-    },
-    "": {
-        "name": "",
-        "party": "",
-        "age": 0,
-        "constituency": "",
-        "social_media": {
-            "website": "",
-            "facebook": "",
-            "x": ""
-        },
-        "contact": "",
-        "summary": "",
-        "headshot": ""
+        "headshot": "https://data.oireachtas.ie/ie/oireachtas/member/id/%C3%89amon-%C3%93-Cu%C3%ADv.S.1989-10-01/image/large"
     }
 }
