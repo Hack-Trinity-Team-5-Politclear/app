@@ -13,7 +13,33 @@ export default function LearnScreen({ navigation }) {
                     navigation.navigate("LearnActivity", {activity: "basic_questions"});
                 }}>
                     <Text style={styles.learnTitle}>1. </Text>
-                    <Text style={styles.learnSubtitle}>Simple History</Text>
+                    <Text style={styles.learnSubtitle}>Simple Irish Political History (Activity) </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.learnCard} onPress={() => {
+                    (async function() {
+                        await Linking.openURL("https://www.youtube.com/watch?v=l8XOZJkozfI")
+                    })()                }}>
+                    <Text style={styles.learnTitle}>2. </Text>
+                    <Text style={styles.learnSubtitle}>Learn About Single-Transferrable Vote (Video)</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.learnCard} onPress={() => {
+                    (async function() {
+                        await Linking.openURL("https://www.youtube.com/watch?v=l8XOZJkozfI")
+                    })()                }}>
+                    <Text style={styles.learnTitle}>3. </Text>
+                    <Text style={styles.learnSubtitle}>Am I eligible to vote? (Activity)</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.learnCard} onPress={() => {
+                    navigation.navigate("LearnActivity", {activity: "ideology_questions"});
+                }}>
+                    <Text style={styles.learnTitle}>4. </Text>
+                    <Text style={styles.learnSubtitle}>What do political parties in Ireland stand for? (Activity)</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.learnCard} onPress={() => {
+                    navigation.navigate("LearnActivity", {activity: "ideology_questions"});
+                }}>
+                    <Text style={styles.learnTitle}>5. </Text>
+                    <Text style={styles.learnSubtitle}>An easy guide to Irish Politics (Article)</Text>
                 </TouchableOpacity>
             </View>
         </View>

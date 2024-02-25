@@ -7,6 +7,7 @@ import TDListScreen from '../screens/TDListScreen';
 import LearnScreen from '../screens/LearnScreen';
 import LocalScreen from '../screens/LocalScreen';
 import LearnActivity from '../screens/LearnActivity';
+import LearnEligibilityActivity from '../screens/LearnEligibilityActivity';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,6 +31,7 @@ export default function HomeRouter() {
 
             <Tab.Screen name="TDList" component={TDListScreen} />
             <Tab.Screen name="LearnActivity" component={LearnActivity}/>
+            <Tab.Screen name="LearnElibilityActivity" component={LearnEligibilityActivity}/>
             <Tab.Screen name="Learn" component={LearnScreen} />
             <Tab.Screen name="Local" component={LocalScreen} />
 

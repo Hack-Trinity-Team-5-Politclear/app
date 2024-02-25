@@ -14,7 +14,7 @@ export default function RootRouter() {
                     headerShown: false,
                 }}
             >
-                {/* <Stack.Screen name="SplashScreen" component={SplashScreen} /> */}
+                <Stack.Screen name="SplashScreen" component={SplashScreen} />
                 <Stack.Screen name="HomeRouter" component={HomeRouter} />
             </Stack.Navigator>
         </NavigationContainer>

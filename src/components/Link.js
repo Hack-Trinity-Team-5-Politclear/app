@@ -17,7 +17,7 @@ export default function Link({label, url}) {
 
 const styles = StyleSheet.create({
     social_media: {
-        textDecorationLine: 1,
+        textDecorationLine: "underline",
         marginLeft: 15
     }
 })
