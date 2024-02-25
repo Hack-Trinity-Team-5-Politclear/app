@@ -3,6 +3,9 @@ import HomeScreen from '../screens/HomeScreen';
 import HomeBottomTab from '../components/navigation/HomeBottomTab';
 import ConstituencyScreen from '../screens/ConstituencyScreen';
 import TDScreen from '../screens/TDScreen';
+import TDListScreen from '../screens/TDListScreen';
+import LearnScreen from '../screens/LearnScreen';
+import LocalScreen from '../screens/LocalScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,6 +26,9 @@ export default function HomeRouter() {
             <Tab.Screen name="Constituency" component={ConstituencyScreen} />
             <Tab.Screen name="TD" component={TDScreen} />
 
+            <Tab.Screen name="TDList" component={TDListScreen} />
+            <Tab.Screen name="Learn" component={LearnScreen} />
+            <Tab.Screen name="Local" component={LocalScreen} />
 
         </Tab.Navigator>
     );
