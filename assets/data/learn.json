@@ -1,0 +1,59 @@
+{
+    "basic_questions": [
+        {
+            "question": "Who is the head of state in Ireland?",
+            "answers": ["Prime Minister", "President", "Taoiseach", "Lord Mayor"],
+            "correct_index": 1
+        },
+        {
+            "question": "What is the name of the lower house of the Oireachtas (Irish Parliament)?",
+            "answers": ["The Senate", "Dáil Éireann", "The Assembly", "Seanad Éireann"],
+            "correct_index": 1
+        },
+        {
+            "question": "What year did the Irish Civil War end?",
+            "answers": ["1921", "1916", "1937", "1949"],
+            "correct_index": 0
+        },
+        {
+            "question": "Which of these political parties is the oldest in Ireland?",
+            "answers": ["Fine Gael", "Sinn Féin", "Fianna Fáil", "Labour Party"],
+            "correct_index": 1
+        },
+        {
+            "question": "What is the term length for the President of Ireland?",
+            "answers": ["4 years", "5 years", "6 years", "7 years"],
+            "correct_index": 3
+        },
+        {
+            "question": "Who was the first female President of Ireland?",
+            "answers": ["Mary Robinson", "Mary McAleese", "Máire Geoghegan-Quinn", "Frances Fitzgerald"],
+            "correct_index": 0
+        },
+        {
+            "question": "What is the name of Ireland's national police service?",
+            "answers": ["An Garda Síochána", "An Garda", "Polis Éireann", "Irish National Guard"],
+            "correct_index": 0
+        },
+        {
+            "question": "What was the Good Friday Agreement primarily about?",
+            "answers": ["Economic policy", "Education reform", "Northern Ireland peace process", "European Union membership"],
+            "correct_index": 2
+        },
+        {
+            "question": "In what year did Ireland join the European Union?",
+            "answers": ["2006", "1973", "1995", "2002"],
+            "correct_index": 1
+        },
+        {
+            "question": "What is the official currency of Ireland?",
+            "answers": ["Euro", "Pound Sterling", "Irish Pound", "Dollar"],
+            "correct_index": 0
+        },
+        {
+            "question": "Who appoints the Taoiseach?",
+            "answers": ["The President", "Dáil Éireann", "The people", "Seanad Éireann"],
+            "correct_index": 0
+        }
+    ]
+}

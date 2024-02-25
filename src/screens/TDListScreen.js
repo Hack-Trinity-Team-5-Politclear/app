@@ -10,6 +10,7 @@ export default function TDListScreen({navigation}) {
         <View>
             <Text style={styles.constituencyTitle}>{constituency.name}</Text>
             <FlatList
+                keyExtractor={(item) => tds[item].name}
                 data={constituency.tds}
                 numColumns={2}
                 renderItem={({ item }) => {
