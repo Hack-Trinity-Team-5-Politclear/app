@@ -3,6 +3,7 @@ import { constituencies } from "../../assets/data/constituencies.json";
 import tds from "../../assets/data/tds.json";
 import { FlatList } from "react-native-gesture-handler";
 import { Image } from "expo-image";
+import TDCard from "../components/TDCard";
 
 export default function ConstituencyScreen({ cons, route, navigation }) {
     const { constituency } = route.params;
@@ -30,7 +31,7 @@ export default function ConstituencyScreen({ cons, route, navigation }) {
                     <Text>Representatives (TDs)</Text>
                     <FlatList
                         data={profile.tds}
-                        renderItem={({ item }) => <TDProfile key={item.name} id={item} navigation={navigation}/>}
+                        renderItem={({ item }) => <TDCard key={item.name} id={item} navigation={navigation}/>}
                         numColumns={2}
                     />
                 </View>
@@ -95,24 +96,6 @@ const styles = StyleSheet.create({
     },
     representatives: {
         padding: 2
-    },
-    tdCard: {
-        borderWidth: 1,
-        borderColor: "#CCCCCC",
-        borderRadius: 12,
-        justifyContent: "center",
-        alignItems: "center",
-        padding: 10,
-        width: 160,
-        margin: 5
-    },
-    tdPic: {
-        width: 60,
-        height: 60,
-        borderRadius: 30
-    },
-    tdName: {
-        fontSize: 12
     },
     tdAction: {
         fontSize: 10

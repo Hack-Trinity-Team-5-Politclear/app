@@ -21,12 +21,14 @@ export default function HomeRouter() {
         >
             {/* <Tab.Screen name="TD" component={TDScreen} initialParams={{td: "Chris-Andrews.D.2007-06-14"}}/> */}
             {/* <Tab.Screen name="Constituency" component={ConstituencyScreen} initialParams={{constituency: "Donegal"}}/> */}
+            <Tab.Screen name="TDList" component={TDListScreen} />
 
-            <Tab.Screen name="Home" component={HomeScreen} />
+
+            {/* <Tab.Screen name="Home" component={HomeScreen} /> */}
             <Tab.Screen name="Constituency" component={ConstituencyScreen} />
             <Tab.Screen name="TD" component={TDScreen} />
 
-            <Tab.Screen name="TDList" component={TDListScreen} />
+            {/* <Tab.Screen name="TDList" component={TDListScreen} /> */}
             <Tab.Screen name="Learn" component={LearnScreen} />
             <Tab.Screen name="Local" component={LocalScreen} />
 
