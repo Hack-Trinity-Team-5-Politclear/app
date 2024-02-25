@@ -80,7 +80,7 @@ export default function HomeScreen({ navigation }) {
                         zIndex: false ? 0 : 10,
                     }}
                     onPress={() => {
-                        console.log("pressed galway west");
+                        navigation.navigate("Constituency", { constituency: "Galway West" })
                     }}
                 />
             </RelativeToBg>
@@ -93,7 +93,7 @@ export default function HomeScreen({ navigation }) {
                         zIndex: false ? 0 : 10,
                     }}
                     onPress={() => {
-                        console.log("pressed kerry");
+                        navigation.navigate("Constituency", { constituency: "Kerry" })
                     }}
                 />
             </RelativeToBg>
